@@ -1,0 +1,56 @@
+# Local configuration and assistant files
+.env
+.env.*
+!.env.example
+.codex
+.agents/
+AGENTS.md
+AGENTS.local.md
+
+# Build outputs and tool caches
+.gradle/
+.gradle-home/
+build/
+out/
+bin/
+*.class
+*.jar
+!**/gradle/wrapper/gradle-wrapper.jar
+
+# IDE and OS files
+.idea/
+.vscode/
+.settings/
+.classpath
+.project
+.factorypath
+.apt_generated/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local logs, dumps and archives
+*.log
+logs/
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.rar
+*.dump
+*.backup
+/Postgres/postgres_data/
+
+# Local SQL scripts and project notes
+/seed_live_data.sql
+/toisBackend/run.ps1
+/toisBackend/full_script.txt
+/toisBackend/запросы.txt
+/toisBackend/42.htm
+/toisBackend/HELP.md
+/toisClient/ToisClient/src/main/resources/sql
+/Требования к проекту.docx

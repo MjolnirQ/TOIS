@@ -1,0 +1,33 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: tois
+      POSTGRES_PASSWORD: ${TOIS_DB_PASSWORD:?Set TOIS_DB_PASSWORD}
+      POSTGRES_DB: tois
+    volumes:
+      - tois_flyway_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U tois -d tois" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./toisBackend
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/tois
+      DB_USERNAME: tois
+      DB_PASSWORD: ${TOIS_DB_PASSWORD:?Set TOIS_DB_PASSWORD}
+      JWT_SECRET: ${TOIS_JWT_SECRET:?Set TOIS_JWT_SECRET}
+      TOIS_ADMIN_PASSWORD: ${TOIS_ADMIN_PASSWORD:?Set TOIS_ADMIN_PASSWORD}
+      SERVER_PORT: 8080
+    ports:
+      - "127.0.0.1:${TOIS_PORT:-8081}:8080"
+
+volumes:
+  tois_flyway_data:

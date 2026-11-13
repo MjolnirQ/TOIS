@@ -1,0 +1,8 @@
+.gradle
+build
+.idea
+*.iml
+*.tar
+**/*.tar
+.env
+run.ps1
