@@ -52,5 +52,5 @@ logs/
 /toisBackend/запросы.txt
 /toisBackend/42.htm
 /toisBackend/HELP.md
-/toisClient/ToisClient/src/main/resources/sql
+/toisClient/src/main/resources/sql
 /Требования к проекту.docx

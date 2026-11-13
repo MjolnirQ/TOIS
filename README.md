@@ -37,7 +37,7 @@ API доступен на [localhost:8081/api](http://localhost:8081/api). Пр�
 ### Клиент
 
 ```powershell
-Set-Location toisClient/ToisClient
+Set-Location toisClient
 .\gradlew.bat run
 ```
 
