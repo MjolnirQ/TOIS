@@ -4,7 +4,7 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
-group = 'org.example'
+group = 'ru.nsu.tois'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -17,7 +17,7 @@ javafx {
 }
 
 application {
-    mainClass = 'org.example.Main'
+    mainClass = 'ru.nsu.tois.client.Main'
     applicationDefaultJvmArgs = ['-Dfile.encoding=UTF-8']
 }
 

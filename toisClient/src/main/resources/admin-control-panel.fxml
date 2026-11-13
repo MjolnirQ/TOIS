@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.controller.AdminControlPanelController"
+            fx:controller="ru.nsu.tois.client.controller.AdminControlPanelController"
             styleClass="admin-window">
 
     <top>

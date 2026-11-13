@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.controller.LoginController"
+      fx:controller="ru.nsu.tois.client.controller.LoginController"
       alignment="CENTER"
       spacing="14"
       styleClass="app-window">

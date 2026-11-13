@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.controller.TradeManagerController"
+            fx:controller="ru.nsu.tois.client.controller.manager.TradeManagerController"
             styleClass="manager-window">
 
     <top>
@@ -38,6 +38,7 @@
 
             <Button text="Обновить справочники"
                     mnemonicParsing="false"
+                    fx:id="refreshLookupsButton"
                     onAction="#onRefreshLookups"
                     styleClass="secondary-button"/>
         </HBox>
@@ -76,6 +77,7 @@
 
                                 <Button text="Выполнить"
                                         mnemonicParsing="false"
+                                        fx:id="executeButton"
                                         onAction="#onExecuteAction"
                                         styleClass="primary-button"/>
 
